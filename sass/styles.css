@@ -1,0 +1,15 @@
+body {
+  font-family: Quicksand, sans-serif;
+  color: #231F20;
+}
+
+body, main, .main_inner {
+  display: flexbox;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+header {
+  order: 1;
+  height: 40%;
+}
