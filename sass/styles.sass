@@ -7,27 +7,117 @@ $grey: #afafaf
 
 //  Define font variables
 $font1: Quicksand, sans-serif
-$size1: 24px
-$size2: 18px
-$size3: 12px
+$size1: calc(1.2em + 0.5vw)
+$size2: calc(0.9em + 0.5vw)
+$size3: calc(0.6em + 0.5vw)
+
 
 //  General settings
+
+*
+    box-sizing: border-box
+
+//  Fonts and colors
+
 body 
     font-family: $font1
     color: $black
-    
 
-body, main, .main_inner 
-    display: flexbox
+h1
+    font-size: $size1
+
+h2 
+    font-size: $size2
+    text-align: justify
+
+p 
+    font-size: $size3 
+    text-align: justify
+
+.button:hover
+    color: $grey    
+     
+
+//  Flexbox
+
+.flex_container, .side_container, main, .main_inner 
+    display: flex
     flex-wrap: wrap
-    box-sizing: border-box
-    
 
-//  Header settings
-header 
-    order: 1
-    height: 40%
-    .header_inner 
+
+//  Header and navigation
+
+.side_container
+    height: 100vh
+    width: 80vw
+    margin-left: auto
+    margin-right: auto
+
+    header 
+        height: 40%
+               
+        .header_inner 
+            position: relative
+
+            .title_box
+                display: flex
+                flex-direction: row
+                width: 100%
+                margin-top: 1em
+                .logo 
+                    position: absolute
+                    right: 0
+                
+            .title_description
+                width: 100%              
+
+    nav
+        width: 100vw
+        height: 60%
+        position: relative
+
+        .nav_inner
+            
+            .circle
+                display: block
+                border-radius: 50%
+                width: 240px
+                height: 240px
+                margin: auto
+                background-color: $green
+            
+            .button
+                color: $red
+                text-decoration: none
+                font-weight: bold
+                font-size: $size1
+                position: absolute
+                bottom: 2em
+            
+            .about
+                left: 0
+            
+            .contact
+                right: 0
+
+            
+
+//  Project gallery
+
+.main_inner
+    .project
+        margin: auto
+
+        .image 
+            width: 360px
+            height: 200px
+            object-fit: cover
+
+        caption p, h1 
+            margin-bottom: 0.5vh
+            margin-top: 0.5vh        
+     
+
         
         
     
