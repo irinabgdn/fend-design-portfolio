@@ -9,7 +9,7 @@ $grey: #afafaf
 $font1: Quicksand, sans-serif
 $size1: calc(1.2em + 0.5vw)
 $size2: calc(0.9em + 0.5vw)
-$size3: calc(0.6em + 0.5vw)
+$size3: calc(0.7em + 0.5vw)
 
 
 //  General settings
@@ -102,20 +102,27 @@ p
 
             
 
-//  Project gallery
+/*  Project gallery */
 
 .main_inner
     .project
         margin: auto
+        padding: 0.6em
 
         .image 
-            width: 360px
-            height: 200px
+            width: 90vw
+            max-width: 400px
+            height: 280px
             object-fit: cover
 
-        caption p, h1 
-            margin-bottom: 0.5vh
-            margin-top: 0.5vh        
+        p, h2
+                margin: 0.1em
+                padding: 0
+                // line-height: 0
+                // -webkit-margin-before: 0.3em
+                // -webkit-margin-after: 0.3em
+               
+
      
 
         
