@@ -49,60 +49,63 @@ p
 
 .side_container
     height: 100vh
-    width: 80vw
-    margin-left: auto
-    margin-right: auto
+    width: 100vw
 
-    header 
-        height: 40%
-               
-        .header_inner 
+    .side_inner
+        width: 80%
+        margin-left: auto
+        margin-right: auto
+
+        header 
+            height: 40%
+                
+            .header_inner 
+                position: relative
+
+                .title_box
+                    display: flex
+                    flex-direction: row
+                    width: 100%
+                    margin-top: 1em
+
+                    .logo 
+                        position: absolute
+                        right: 0
+                    
+                .title_description
+                    width: 100%              
+
+        nav
+            height: 60%
             position: relative
 
-            .title_box
-                display: flex
-                flex-direction: row
-                width: 100%
-                margin-top: 1em
-                .logo 
-                    position: absolute
-                    right: 0
+            .nav_inner
                 
-            .title_description
-                width: 100%              
-
-    nav
-        width: 100vw
-        height: 60%
-        position: relative
-
-        .nav_inner
-            
-            .circle
-                display: block
-                border-radius: 50%
-                width: 240px
-                height: 240px
-                margin: auto
-                background-color: $green
-            
-            .button
-                color: $red
-                text-decoration: none
-                font-weight: bold
-                font-size: $size1
-                position: absolute
-                bottom: 2em
-            
-            .about
-                left: 0
-            
-            .contact
-                right: 0
+                .circle
+                    display: block
+                    border-radius: 50%
+                    width: 240px
+                    height: 240px
+                    margin: auto
+                    background-color: $green
+                
+                .button
+                    color: $red
+                    text-decoration: none
+                    font-weight: bold
+                    font-size: $size1
+                    position: absolute
+                    bottom: 2em
+                
+                .about
+                    left: 0
+                
+                .contact
+                    right: 0
 
             
 
-/*  Project gallery */
+//  Project gallery
 
 .main_inner
     .project
@@ -111,16 +114,25 @@ p
 
         .image 
             width: 90vw
-            max-width: 400px
+            max-width: 360px
             height: 280px
             object-fit: cover
 
         p, h2
                 margin: 0.1em
                 padding: 0
-                // line-height: 0
-                // -webkit-margin-before: 0.3em
-                // -webkit-margin-after: 0.3em
+
+//  Tablet display 
+
+@media screen and (min-width: 641px)
+
+    .side_container
+        width: 40%
+        position: sticky
+        -webkit-position: sticky
+        top: 0
+    main 
+        width: 60%
                
 
      
