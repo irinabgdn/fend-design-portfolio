@@ -1,139 +1,316 @@
 //  Define color variables
+
 $green: #49A370
 $red: #F4785A
-$blue: #4CADCC
+$blue: #02b3e4
 $black: #231F20
 $grey: #afafaf
+$lightgrey: #e6e7e8
+$pale: #e0e0e8
 
 //  Define font variables
+
 $font1: Quicksand, sans-serif
-$size1: calc(1.2em + 0.5vw)
+$size1: calc(1.4em + 0.5vw)
 $size2: calc(0.9em + 0.5vw)
 $size3: calc(0.7em + 0.5vw)
 
+// Mixin
+
+@mixin btn 
+    text-decoration: none
+    font-weight: bold
+    font-size: $size1
+    
 
 //  General settings
 
 *
     box-sizing: border-box
 
+body
+    margin: 0
+
 //  Fonts and colors
 
-body 
+body
     font-family: $font1
     color: $black
 
 h1
     font-size: $size1
 
-h2 
+h2
     font-size: $size2
     text-align: justify
 
-p 
-    font-size: $size3 
+p
+    font-size: $size3
     text-align: justify
 
-.button:hover
-    color: $grey    
      
 
 //  Flexbox
 
-.flex-container, .side-container, main, .main-inner 
+.flex-container,
+.left-container,
+.right-container
     display: flex
     flex-wrap: wrap
 
 
 //  Header and navigation
 
-.side-container
-    height: 100vh
+header
+    height: 10vh
     width: 100vw
+    background-color: $lightgrey
+    position: fixed
+    z-index: 10
 
-    .side-inner
-        width: 80%
-        margin-left: auto
-        margin-right: auto
-
-        header 
-            height: 40%
+    &:hover
+        cursor: pointer
+        background-color: $pale
+    
+    .close-button 
+        width: 2em
+        height: 2em
+        border: 3px solid $blue
+        border-radius: 50%
+        position: absolute
+        top: 2vh
+        right: 10vw
+        -webkit-transition-duration: 0.5s
+        transition-duration: 0.5s
                 
-            .header-_inner 
+        &:before 
+            content: ""
+            display: block
+            position: absolute
+            background-color: $blue
+            width: 80%
+            height: 6%
+            left: 10%
+            top: 47%
+        
+        
+        &:after 
+            content: ""
+            display: block
+            position: absolute
+            background-color: $blue
+            width: 6%
+            height: 80%
+            left: 47%
+            top: 10%
+        
+        
+        &.open 
+            background-color: $blue
+            &:after 
+                background-color: $red
+            
+            &:before
+                background-color: $red
+            transform: rotate(225deg)
+    
+nav
+    visibility: hidden
+    background-color: $lightgrey
+    z-index: 6
+    height: 0
+    width: 100vw
+    transition: height 0.5s ease-in-out
+    
+    &.open
+        visibility: visible
+        display: block
+        width: 100vw
+        height: 90vh            
+        position: absolute
+        bottom: 0
+
+    .nav-inner
+        
+        .nav-row
+            padding: 2em
+
+            a 
+                color: $blue
+                margin: auto
+                padding: 1em
+                text-align: center
+                @include btn
+
+            a.hover
+                color: $grey
+
+
+
+/* Main content style   
+.flex-container
+    height: 90vh
+    overflow: scroll
+    position: absolute
+    // z-index: 0
+    bottom: 0
+
+    .left-container
+        height: 90vh
+        width: 100vw
+
+        .left-inner
+            width: 80%
+            margin-left: auto
+            margin-right: auto
+
+            .intro
+                height: 30vh
+
+                .intro-inner
+                    position: relative
+                    top: 2em
+
+                    .title-box
+                        display: flex
+                        flex-direction: row
+                        width: 100%
+
+                        .name-title
+                            vertical-align: bottom
+
+                        .logo
+                            width: 48px
+                            height: 48px
+                            position: absolute
+                            right: 0
+                        
+                    .title-description
+                        width: 100%
+                    
+            //  Add the green circle
+            .circle-container
+                height: 50vh
                 position: relative
 
-                .title-box
-                    display: flex
-                    flex-direction: row
-                    width: 100%
-                    margin-top: 1em
-
-                    .logo 
-                        position: absolute
-                        right: 0
-                    
-                .title-description
-                    width: 100%              
-
-        nav
-            height: 60%
-            position: relative
-
-            .nav-inner
-                
                 .circle
-                    display: block
-                    border-radius: 50%
-                    width: 240px
-                    height: 240px
-                    margin: auto
-                    background-color: $green
-                
-                .button
-                    color: $red
-                    text-decoration: none
-                    font-weight: bold
-                    font-size: $size1
+                    margin: 0
                     position: absolute
-                    bottom: 2em
-                
-                .about
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    border-radius: 50%
+                    width: 200px
+                    height: 200px
+                    background-color: $green
+
+            footer
+                height: 5vw
+                width: 80%
+                position: absolute
+                bottom: 0.5em
+                display: inline-flex
+                object-fit: contain
+
+                .drawer
+                    width: 6vw
+                    position: relative
                     left: 0
+                    .clearfix
+                        overflow: auto
+
+                    .button
+                        color: $red
+                        @include btn
+                        &:hover
+                            color: $grey
+
                 
-                .contact
+                .social
+                    position: absolute
                     right: 0
+                    top: 0                 
+                    .clearfix
+                        overflow: auto
 
-            
+                    .fa
+                        padding: 5.5px
+                        font-size: 14px
+                        width: 24px
+                        height: 24px
+                        vertical-align: top
+                        text-align: left
+                        text-decoration: none
+                        margin-left: 0.5em
+                        border-radius: 50%
+                        background-color: $red
+                        color: white
 
-//  Project gallery
+                        &:hover 
+                            background-color: $grey
+                        
 
-.main-inner
-    .project
-        margin: auto
-        padding: 0.6em
-
-        .image 
-            width: 90vw
-            max-width: 360px
-            height: 280px
-            object-fit: cover
-
-        p, h2
-                margin: 0.1em
-                padding: 0
-
-//  Tablet display 
-
-@media screen and (min-width: 641px)
-
-    .side-container
-        width: 40%
-        position: sticky
-        -webkit-position: sticky
-        top: 0
+    //  Project gallery
     main 
-        width: 60%
-               
+        background-color: $lightgrey
+            
+        .right-container
+            .project
+                padding-left: 10vw
+                padding-right: 10vw
+                padding-bottom: 5vw
+                padding-top: 5vw
+                width: 100vw
+                display: block
+
+                .image
+                    // width: 80%
+                    max-height: 100%
+                    max-width: 100%
+                    object-fit: contain
+                    margin: auto
+
+                p, h2
+                        margin-top: 0.1em
+                        margin-bottom: 0.1em
+
+//  Tablet display
+
+@media screen and (min-device-width: 768px) and (orientation: landscape)
+    header
+        .close-button
+            position: absolute
+            right: 1em
+
+    .flex-container
+            
+        .left-container
+            width: 40%
+            position: sticky
+            -webkit-position: sticky
+            top: 0
+        main
+            width: 60%
+            height: 100%
+            
+            .right-container
+                
+                .project
+                    width: 33.3%
+                    padding: 1em
+
+                .prj-open
+                    width: 100%
+                    order: 0
+
+                    .prj-items
+                        box-sizing: content-box
+                        margin: auto
+
+
+
+
+
 
      
 

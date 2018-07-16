@@ -6,101 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+    <header>
+      <div class="header-inner">
+        <div class="close-button" id="close">      
+        </div>
+      </div>  
+    </header>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <div class="nav-row">
+          <a href="#home">Home</a>
+        </div>
+        <div class="nav-row">  
+          <a href="#projects">Projects</a>
+        </div>
+        <div class="nav-row">
+          <a href="#about">About</a>
+        </div>            
+        <div class="nav-row">
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="flex-container">
-      <div class="side-container">
-        <div class="side-inner">
-          <header>
-            <div class="header-inner">
+      <div class="left-container">
+        <div class="left-inner">
+          <section class='intro' id='intro-section'>
+            <div class="intro-inner">
               <div class="title-box">
                 <h1 class="name-title">Irina Bogdan</h1>
 
                 <img class="logo"
                   src="img/udacity.png"
-                  alt="logo Udacity"
-                  width="48px" height="48px">
+                  alt="logo Udacity">
               </div>
               
               <h2 class="title-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h2>
-
             </div>
-          </header>
-
-          <nav>
-            <div class="nav-inner">
-
-              <div class="circle"></div>
-
-              <footer>
-
-                <div class="about-drawer drawer"></div>
-                <div class="contact-drawer drawer"></div>
-
-                <a class="about button" href="#">A</a>
-
-                <a class="contact button" href="#">C</a>
-
-              </footer>
+          </section>
+          <div class="circle-container">
+            <div class="circle"></div>
+          </div>
+          <footer>          
+            <div class="about-drawer drawer">
+              <a class="about button" href="#">A</a>
             </div>
-          </nav>
+            <div class="contact-drawer drawer">
+              <a class="contact button" href="#">C</a>
+            </div>
+            <div class="social">
+              <a class="fa fa-linkedin" href="#">
+              </a>
+              <a class="fa fa-instagram" href="#">
+              </a>
+              <a class="fa fa-facebook" href="#">
+              </a> 
+            </div>
+          </footer>
         </div>
       </div>
 
       <main>
-        <section class="main-inner">
+        <section class="right-container" id="prj-container">
           
-          <article class="project first-project">
+          <article class="project prj-open" id="first-project">
+            <div class="prj-items">
+              <img class="image" id="first-image" 
+              alt="Wooden learning toy - Musical mechanism" 
+              src="/img/prj1-100.jpg">
             
-            <img class="image first-image" 
-            alt="First Project Picture" 
-            src="/img/firstprj.jpg" 
-            width="300px">
-          
-            <caption>
-              <h2>First Project</h2>
-              <p>Random first project text</p>
-            </caption>
-                      
+              <caption>
+                <h2>First Project</h2>
+                <p>Random first project text</p>
+              </caption>
+            </div>                      
           </article>
-          <article class="project second-project">
+
+          <article class="project" id="second-project">
+            <div class="prj-items">
+              <img class="image" id="second-image" 
+              alt="Do it yourself wooden kit - Block and tackle" 
+              src="/img/prj2-100.jpg">
             
-            <img class="image second-image" 
-            alt="Second Project Picture" 
-            src="/img/secondprj.jpg" 
-            width="300px">
-          
-            <caption>
-              <h2>Second Project</h2>
-              <p>Random second project text</p>
-            </caption>
-                      
+              <caption>
+                <h2>Second Project</h2>
+                <p>Random second project text</p>
+              </caption>
+            </div>
           </article>
-          <article class="project third-project">
+          <article class="project" id="third-project">
+            <div class="prj-items">
+              <img class="image" id="third-image" 
+              alt="Do it yourself wooden kit - Rubber toy car" 
+              src="/img/prj3-100.jpg">
             
-            <img class="image third-image" 
-            alt="Third Project Picture" 
-            src="/img/thirdprj.jpg" 
-            width="300px">
-          
-            <caption>
-              <h2>Third Project</h2>
-              <p>Random third project text</p>
-            </caption>
-                      
+              <caption>
+                <h2>Third Project</h2>
+                <p>Random third project text</p>
+              </caption>
+            </div>
           </article>
-          <article class="project fourth-project">
+          <article class="project" id="fourth-project">
+            <div class="prj-items">
+              <img class="image" id="fourth-image" 
+              alt="Do it yourself wooden kit - Electrical toy car" 
+              src="/img/prj4-100.jpg">
             
-            <img class="image fourth-image" 
-            alt="Fourth Project Picture" 
-            src="/img/fourthprj.jpg" 
-            width="300px">
-          
-            <caption>
-              <h2>Fourth Project</h2>
-              <p>Random fourth project text</p>
-            </caption>
-                      
+              <caption>
+                <h2>Fourth Project</h2>
+                <p>Random fourth project text</p>
+              </caption>
+            </div>                      
           </article>
         </section>
       </main>
