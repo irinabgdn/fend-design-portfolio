@@ -5,7 +5,8 @@ $red: #F4785A
 $blue: #02b3e4
 $black: #231F20
 $grey: #afafaf
-$lightgrey: #e6e7e8
+$mediumgrey: #e6e7e8
+$lightgrey: #fafafa
 $pale: #e0e0e8
 
 //  Define font variables
@@ -42,13 +43,13 @@ h1
 
 h2
     font-size: $size2
-    text-align: justify
+    text-align: left
 
 p
     font-size: $size3
-    text-align: justify
+    text-align: left
 
-     
+ 
 
 //  Flexbox
 
@@ -64,7 +65,7 @@ p
 header
     height: 10vh
     width: 100vw
-    background-color: $lightgrey
+    background-color: $mediumgrey
     position: fixed
     z-index: 10
 
@@ -80,7 +81,6 @@ header
         position: absolute
         top: 2vh
         right: 10vw
-        -webkit-transition-duration: 0.5s
         transition-duration: 0.5s
                 
         &:before 
@@ -116,27 +116,28 @@ header
     
 nav
     visibility: hidden
-    background-color: $lightgrey
+    opacity: 0
+    background-color: $mediumgrey
     z-index: 6
     height: 0
     width: 100vw
-    transition: height 0.5s ease-in-out
+    position: fixed
+    top: 10vh
+    transition: opacity 0.3s linear
     
     &.open
         visibility: visible
-        display: block
-        width: 100vw
-        height: 90vh            
-        position: absolute
-        bottom: 0
+        opacity: 1
+        height: 90vh
 
     .nav-inner
-        
-        .nav-row
-            padding: 2em
+        margin-top: 4em
 
+        .nav-row
             a 
                 color: $blue
+                max-width: 200px
+                display: block
                 margin: auto
                 padding: 1em
                 text-align: center
@@ -144,13 +145,73 @@ nav
 
             a.hover
                 color: $grey
+                cursor: pointer
 
+.info-page
+    visibility: hidden
+    opacity: 0
+    background-color: $mediumgrey
+    z-index: 6
+    height: 0
+    width: 100vw
+    position: fixed
+    top: 10vh
+
+    .about-inner
+        width: 40%
+        margin: auto
+        margin-top: 10vh
+
+        .large-text
+            font-size: 120px
+            color: $red
+
+        .msg1
+            color: $green
+        
+        .msg2
+            color: $blue
+
+        .row
+            height: 1.2em
+            
+    .contact-inner
+        width: 40%
+        margin: auto
+        margin-top: 10vh
+
+        .large-text
+            font-size: 120px
+            color: $red
+
+        .msg1
+            color: $green
+        
+        .msg2
+            color: $blue
+
+        .e-mail
+            color: $black
+        .row
+            height: 1.2em
+
+        .link
+            @include btn
+            font-size: $size2
+            color: $black
+            &:hover
+                text-decoration: underline
+                cursor: pointer
+
+    &.open
+        visibility: visible
+        opacity: 1
+        height: 90vh
 
 
 /* Main content style   
 .flex-container
     height: 90vh
-    overflow: scroll
     position: absolute
     // z-index: 0
     bottom: 0
@@ -165,7 +226,7 @@ nav
             margin-right: auto
 
             .intro
-                height: 30vh
+                height: 40vh
 
                 .intro-inner
                     position: relative
@@ -187,51 +248,33 @@ nav
                         
                     .title-description
                         width: 100%
+                        font-size: $size2
+                        font-weight: bold
+                        text-align: justify
                     
-            //  Add the green circle
-            .circle-container
-                height: 50vh
-                position: relative
-
-                .circle
-                    margin: 0
-                    position: absolute
-                    top: 50%
-                    left: 50%
-                    transform: translate(-50%, -50%)
-                    border-radius: 50%
-                    width: 200px
-                    height: 200px
-                    background-color: $green
-
             footer
-                height: 5vw
                 width: 80%
                 position: absolute
-                bottom: 0.5em
+                bottom: 3vh
                 display: inline-flex
                 object-fit: contain
 
                 .drawer
                     width: 6vw
+                    margin-right: 1em
                     position: relative
                     left: 0
-                    .clearfix
-                        overflow: auto
 
                     .button
                         color: $red
                         @include btn
                         &:hover
                             color: $grey
-
+                            cursor: pointer
                 
                 .social
                     position: absolute
                     right: 0
-                    top: 0                 
-                    .clearfix
-                        overflow: auto
 
                     .fa
                         padding: 5.5px
@@ -248,20 +291,35 @@ nav
 
                         &:hover 
                             background-color: $grey
-                        
+                            cursor: pointer
+
+                    .fa-facebook
+                        font-size: 15px
 
     //  Project gallery
     main 
         background-color: $lightgrey
+        overflow-y: scroll
+        width: 100vw
             
         .right-container
+
             .project
                 padding-left: 10vw
                 padding-right: 10vw
                 padding-bottom: 5vw
                 padding-top: 5vw
-                width: 100vw
+                width: 100%
                 display: block
+
+                #first-project
+                    order: 1
+                #second-project
+                    order: 2
+                #third-project
+                    order: 3
+                #fourth-project
+                    order: 4
 
                 .image
                     // width: 80%
@@ -274,13 +332,14 @@ nav
                         margin-top: 0.1em
                         margin-bottom: 0.1em
 
+
 //  Tablet display
 
 @media screen and (min-device-width: 768px) and (orientation: landscape)
     header
         .close-button
             position: absolute
-            right: 1em
+            right: 2em
 
     .flex-container
             
@@ -288,24 +347,17 @@ nav
             width: 40%
             position: sticky
             -webkit-position: sticky
-            top: 0
+
         main
             width: 60%
             height: 100%
             
             .right-container
-                
                 .project
-                    width: 33.3%
+                    width: 50%
                     padding: 1em
 
-                .prj-open
-                    width: 100%
-                    order: 0
-
-                    .prj-items
-                        box-sizing: content-box
-                        margin: auto
+                
 
 
 

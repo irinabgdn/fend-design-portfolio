@@ -11,32 +11,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
+    <header id="home">
       <div class="header-inner">
-        <div class="close-button" id="close">      
+        <div class="close-button" id="close" tabindex="0" aria-label="menu button">      
         </div>
-      </div>  
+      </div>
     </header>
+
     <nav class="nav-bar">
       <div class="nav-inner">
         <div class="nav-row">
-          <a href="#home">Home</a>
+          <a class="home-btn btn" href="#home">Home</a>
         </div>
         <div class="nav-row">  
-          <a href="#projects">Projects</a>
+          <a class="projects-btn btn" href="#projects">Projects</a>
         </div>
         <div class="nav-row">
-          <a href="#about">About</a>
+          <a class="about-btn btn" href="#about">About</a>
         </div>            
         <div class="nav-row">
-          <a href="#contact">Contact</a>
+          <a class="contact-btn btn" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
 
+    <section class="info-page closed" id="about">
+      <div class="about-inner">
+        <div class="about-intro large-text">A</div>
+        <h2 class="about-text msg1">chica</h2>
+        <p class="about-headline"></p>
+        <div class="row"></div>
+        <h2 class="about-text msg2">chica</h2>
+        <p class="about-headline"></p>
+      </div>
+    </section>
+
+    <section class="info-page closed" id="contact">
+      <div class="contact-inner">
+        <div class="contact-intro large-text">C</div>
+        <h1 class="contact-msg msg1">Say hi</h1>
+        <h2 class="e-mail">irina.bogdan1@gmail.com</h2>
+        <div class="row"></div>
+        <h3 class="msg2">Find me on</h3>
+        <a class="link" href="http://github.com/irinabgdn/">github</a>
+      </div>
+    </section>
+
     <div class="flex-container">
       <div class="left-container">
         <div class="left-inner">
+
           <section class='intro' id='intro-section'>
             <div class="intro-inner">
               <div class="title-box">
@@ -47,43 +71,43 @@
                   alt="logo Udacity">
               </div>
               
-              <h2 class="title-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h2>
+              <p class="title-description">Web designer in the making, Udacity + Google front end development student. Architect, designer and maker.</p>
+              <p class="title-description">For some years, I've designed and prototyped play-to-learn materials that give kids the opportunity to explore and discover natural facts and phenomena and to be able to acknowledge them in real life. Here are some of my projects.</p>
             </div>
           </section>
-          <div class="circle-container">
-            <div class="circle"></div>
-          </div>
+
           <footer>          
             <div class="about-drawer drawer">
-              <a class="about button" href="#">A</a>
+              <a class="about-btn button" href="#about">A</a>
             </div>
             <div class="contact-drawer drawer">
-              <a class="contact button" href="#">C</a>
+              <a class="contact-btn button" href="#contact">C</a>
             </div>
             <div class="social">
-              <a class="fa fa-linkedin" href="#">
+              <a class="fa fa-linkedin" href="https://www.linkedin.com/in/irina-bogdan-595312b2/">
               </a>
-              <a class="fa fa-instagram" href="#">
+              <a class="fa fa-instagram" href="https://www.instagram.com/irina.bgdn/">
               </a>
-              <a class="fa fa-facebook" href="#">
+              <a class="fa fa-facebook" href="https://www.facebook.com/ibgdn">
               </a> 
             </div>
           </footer>
+
         </div>
       </div>
 
       <main>
-        <section class="right-container" id="prj-container">
+        <section class="right-container" id="projects">
           
-          <article class="project prj-open" id="first-project">
+          <article class="project" id="first-project">
             <div class="prj-items">
               <img class="image" id="first-image" 
               alt="Wooden learning toy - Musical mechanism" 
               src="/img/prj1-100.jpg">
             
               <caption>
-                <h2>First Project</h2>
-                <p>Random first project text</p>
+                <h2>Musical mechanism</h2>
+                <p>A learning material for kindergarten kids to assemble and explore musical notes</p>
               </caption>
             </div>                      
           </article>
@@ -91,27 +115,29 @@
           <article class="project" id="second-project">
             <div class="prj-items">
               <img class="image" id="second-image" 
-              alt="Do it yourself wooden kit - Block and tackle" 
+              alt="Do it yourself wooden kit - Rubber toy car" 
               src="/img/prj2-100.jpg">
             
               <caption>
-                <h2>Second Project</h2>
-                <p>Random second project text</p>
+                <h2>Rubberband powered toy car</h2>
+                <p>DIY Educational kit for the study of speed, acceleration and friction forces</p>
               </caption>
             </div>
           </article>
+
           <article class="project" id="third-project">
             <div class="prj-items">
               <img class="image" id="third-image" 
-              alt="Do it yourself wooden kit - Rubber toy car" 
+              alt="Do it yourself wooden kit - Block and tackle" 
               src="/img/prj3-100.jpg">
             
               <caption>
-                <h2>Third Project</h2>
-                <p>Random third project text</p>
+                <h2>Block and Tackle Crane</h2>
+                <p>DIY Educational kit with focus on pulleys, a fun and practical outdoor toy</p>
               </caption>
             </div>
           </article>
+
           <article class="project" id="fourth-project">
             <div class="prj-items">
               <img class="image" id="fourth-image" 
@@ -119,8 +145,8 @@
               src="/img/prj4-100.jpg">
             
               <caption>
-                <h2>Fourth Project</h2>
-                <p>Random fourth project text</p>
+                <h2>Electrical motor powered vehicle</h2>
+                <p>DIY kit that uses a motor from an IKEA mixer to explore electrical power and traction</p>
               </caption>
             </div>                      
           </article>

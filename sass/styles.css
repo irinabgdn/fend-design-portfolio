@@ -265,6 +265,22 @@ nav .nav-inner .nav-row a.hover {
   display: block;
 }
 
+.flex-container main .right-container .project #first-project {
+  order: 1;
+}
+
+.flex-container main .right-container .project #second-project {
+  order: 2;
+}
+
+.flex-container main .right-container .project #third-project {
+  order: 3;
+}
+
+.flex-container main .right-container .project #fourth-project {
+  order: 4;
+}
+
 .flex-container main .right-container .project .image {
   max-height: 100%;
   max-width: 100%;
@@ -291,6 +307,9 @@ nav .nav-inner .nav-row a.hover {
   .flex-container main {
     width: 60%;
     height: 100%;
+  }
+  .flex-container main .right-container {
+    margin: auto;
   }
   .flex-container main .right-container .project {
     width: 33.3%;
