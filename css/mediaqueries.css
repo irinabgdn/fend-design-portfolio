@@ -1,0 +1,87 @@
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  header {
+    height: 14vh;
+  }
+  nav {
+    top: 14vh;
+  }
+  nav.open {
+    height: 86vh;
+  }
+  nav .nav-inner .nav-row .btn {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+  .info-page {
+    top: 14vh;
+  }
+  .info-page.open {
+    height: 86vh;
+  }
+  .info-page .info-container {
+    width: 80%;
+  }
+  .info-page .info-container .info-box {
+    width: 50%;
+    padding: 1em;
+    margin: auto;
+  }
+  .info-page .info-container .info-box .msg2 {
+    margin-top: 3.2em;
+  }
+  .info-page .info-container .info-box .large-text {
+    width: 100%;
+    display: block;
+    max-height: 100px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  .info-page .info-container .info-box .row {
+    display: none;
+  }
+  .title-description {
+    margin: 0.3em;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  header .close-button {
+    position: absolute;
+    right: 2em;
+  }
+  .info-page {
+    overflow-y: scroll;
+  }
+  .info-page .about-container {
+    width: 40%;
+  }
+  .info-page .about-container .large-text {
+    font-size: 120px;
+  }
+  .info-page .about-container .row {
+    height: 0.6em;
+  }
+  .info-page .contact-inner {
+    width: 40%;
+  }
+  .info-page .contact-inner .large-text {
+    font-size: 120px;
+  }
+  .info-page .contact-inner .row {
+    height: 0.6em;
+  }
+  .flex-container .left-container {
+    width: 40%;
+    position: sticky;
+    -webkit-position: -webkit-sticky;
+  }
+  .flex-container main {
+    width: 60%;
+    height: 100%;
+  }
+  .flex-container main .right-container .project {
+    width: 50%;
+    padding: 1em;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */

@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: calc(0.9em + 0.5vw);
+  font-size: calc(0.8em + 0.5vw);
   text-align: left;
 }
 
@@ -28,7 +28,8 @@ p {
 
 .flex-container,
 .left-container,
-.right-container {
+.right-container,
+.info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +118,11 @@ nav.open {
 }
 
 nav .nav-inner {
-  margin-top: 4em;
+  margin-top: 1em;
+}
+
+nav .nav-inner .nav-row {
+  margin: auto;
 }
 
 nav .nav-inner .nav-row a {
@@ -125,7 +130,7 @@ nav .nav-inner .nav-row a {
   max-width: 200px;
   display: block;
   margin: auto;
-  padding: 1em;
+  padding: 30px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -148,65 +153,51 @@ nav .nav-inner .nav-row a.hover {
   top: 10vh;
 }
 
-.info-page .about-inner {
-  width: 40%;
+.info-page .info-container {
+  width: 60%;
   margin: auto;
-  margin-top: 10vh;
+  padding: em;
 }
 
-.info-page .about-inner .large-text {
-  font-size: 120px;
+.info-page .info-container .info-box p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.info-page .info-container .info-box .large-text {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  font-size: 80px;
   color: #F4785A;
 }
 
-.info-page .about-inner .msg1 {
+.info-page .info-container .info-box .msg1 {
   color: #49A370;
+  margin-top: 0.3em;
 }
 
-.info-page .about-inner .msg2 {
+.info-page .info-container .info-box .msg2 {
   color: #02b3e4;
 }
 
-.info-page .about-inner .row {
-  height: 1.2em;
-}
-
-.info-page .contact-inner {
-  width: 40%;
-  margin: auto;
-  margin-top: 10vh;
-}
-
-.info-page .contact-inner .large-text {
-  font-size: 120px;
-  color: #F4785A;
-}
-
-.info-page .contact-inner .msg1 {
-  color: #49A370;
-}
-
-.info-page .contact-inner .msg2 {
-  color: #02b3e4;
-}
-
-.info-page .contact-inner .e-mail {
+.info-page .info-container .info-box .e-mail {
   color: #231F20;
 }
 
-.info-page .contact-inner .row {
-  height: 1.2em;
+.info-page .info-container .info-box .row {
+  height: 0.6em;
 }
 
-.info-page .contact-inner .link {
+.info-page .info-container .info-box .link {
   text-decoration: none;
   font-weight: bold;
   font-size: calc(1.4em + 0.5vw);
-  font-size: calc(0.9em + 0.5vw);
+  font-size: calc(0.8em + 0.5vw);
   color: #231F20;
+  line-height: 1.2;
 }
 
-.info-page .contact-inner .link:hover {
+.info-page .info-container .info-box .link:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -217,7 +208,6 @@ nav .nav-inner .nav-row a.hover {
   height: 90vh;
 }
 
-/* Main content style */
 .flex-container {
   height: 90vh;
   position: absolute;
@@ -268,9 +258,10 @@ nav .nav-inner .nav-row a.hover {
 
 .flex-container .left-container .left-inner .intro .intro-inner .title-description {
   width: 100%;
-  font-size: calc(0.9em + 0.5vw);
+  font-size: calc(0.8em + 0.5vw);
   font-weight: bold;
   text-align: justify;
+  line-height: 1.2;
 }
 
 .flex-container .left-container .left-inner footer {
@@ -375,18 +366,86 @@ nav .nav-inner .nav-row a.hover {
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  margin: auto;
+  margin: 0;
 }
 
 .flex-container main .right-container .project p, .flex-container main .right-container .project h2 {
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
-@media screen and (min-device-width: 768px) and (orientation: landscape) {
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  header {
+    height: 14vh;
+  }
+  nav {
+    top: 14vh;
+  }
+  nav.open {
+    height: 86vh;
+  }
+  nav .nav-inner .nav-row .btn {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+  .info-page {
+    top: 14vh;
+  }
+  .info-page.open {
+    height: 86vh;
+  }
+  .info-page .info-container {
+    width: 80%;
+  }
+  .info-page .info-container .info-box {
+    width: 50%;
+    padding: 1em;
+    margin: auto;
+  }
+  .info-page .info-container .info-box .msg2 {
+    margin-top: 3.2em;
+  }
+  .info-page .info-container .info-box .large-text {
+    width: 100%;
+    display: block;
+    max-height: 100px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  .info-page .info-container .info-box .row {
+    display: none;
+  }
+  .title-description {
+    margin: 0.3em;
+    font-weight: normal;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
   header .close-button {
     position: absolute;
     right: 2em;
+  }
+  .info-page {
+    overflow-y: scroll;
+  }
+  .info-page .about-container {
+    width: 40%;
+  }
+  .info-page .about-container .large-text {
+    font-size: 120px;
+  }
+  .info-page .about-container .row {
+    height: 0.6em;
+  }
+  .info-page .contact-inner {
+    width: 40%;
+  }
+  .info-page .contact-inner .large-text {
+    font-size: 120px;
+  }
+  .info-page .contact-inner .row {
+    height: 0.6em;
   }
   .flex-container .left-container {
     width: 40%;

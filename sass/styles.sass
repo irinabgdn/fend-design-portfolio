@@ -1,3 +1,4 @@
+
 //  Define color variables
 
 $green: #49A370
@@ -13,7 +14,7 @@ $pale: #e0e0e8
 
 $font1: Quicksand, sans-serif
 $size1: calc(1.4em + 0.5vw)
-$size2: calc(0.9em + 0.5vw)
+$size2: calc(0.8em + 0.5vw)
 $size3: calc(0.7em + 0.5vw)
 
 // Mixin
@@ -55,7 +56,8 @@ p
 
 .flex-container,
 .left-container,
-.right-container
+.right-container,
+.info-container
     display: flex
     flex-wrap: wrap
 
@@ -131,15 +133,17 @@ nav
         height: 90vh
 
     .nav-inner
-        margin-top: 4em
+        margin-top: 1em
 
         .nav-row
+            margin: auto
+
             a 
                 color: $blue
                 max-width: 200px
                 display: block
                 margin: auto
-                padding: 1em
+                padding: 30px
                 text-align: center
                 @include btn
 
@@ -147,6 +151,7 @@ nav
                 color: $grey
                 cursor: pointer
 
+// About page and Contact page styles
 .info-page
     visibility: hidden
     opacity: 0
@@ -156,66 +161,59 @@ nav
     width: 100vw
     position: fixed
     top: 10vh
-
-    .about-inner
-        width: 40%
+   
+    .info-container
+        width: 60%
         margin: auto
-        margin-top: 10vh
+        padding: em
 
-        .large-text
-            font-size: 120px
-            color: $red
+        .info-box
+                   
+            p
+                margin-top: 0.3em
+                margin-bottom: 0.3em
 
-        .msg1
-            color: $green
-        
-        .msg2
-            color: $blue
-
-        .row
-            height: 1.2em
+            .large-text
+                margin-top: 1em
+                margin-bottom: 0.3em
+                font-size: 80px
+                color: $red
+                        
+            .msg1
+                color: $green
+                margin-top: 0.3em
             
-    .contact-inner
-        width: 40%
-        margin: auto
-        margin-top: 10vh
+            .msg2
+                color: $blue
 
-        .large-text
-            font-size: 120px
-            color: $red
+            .e-mail
+                color: $black
 
-        .msg1
-            color: $green
-        
-        .msg2
-            color: $blue
+            .row
+                height: 0.6em
 
-        .e-mail
-            color: $black
-        .row
-            height: 1.2em
+            .link
+                @include btn
+                font-size: $size2
+                color: $black
+                line-height: 1.2
 
-        .link
-            @include btn
-            font-size: $size2
-            color: $black
-            &:hover
-                text-decoration: underline
-                cursor: pointer
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer
 
     &.open
         visibility: visible
         opacity: 1
         height: 90vh
 
-
-/* Main content style   
+// Main flexbox 
 .flex-container
     height: 90vh
     position: absolute
-    // z-index: 0
     bottom: 0
 
+    // Flexbox container
     .left-container
         height: 90vh
         width: 100vw
@@ -239,7 +237,7 @@ nav
 
                         .name-title
                             vertical-align: bottom
-
+                
                         .logo
                             width: 48px
                             height: 48px
@@ -251,6 +249,7 @@ nav
                         font-size: $size2
                         font-weight: bold
                         text-align: justify
+                        line-height: 1.2
                     
             footer
                 width: 80%
@@ -259,6 +258,7 @@ nav
                 display: inline-flex
                 object-fit: contain
 
+                // About and Contact buttons
                 .drawer
                     width: 6vw
                     margin-right: 1em
@@ -272,6 +272,7 @@ nav
                             color: $grey
                             cursor: pointer
                 
+                // Social media buttons
                 .social
                     position: absolute
                     right: 0
@@ -296,12 +297,14 @@ nav
                     .fa-facebook
                         font-size: 15px
 
+
     //  Project gallery
     main 
         background-color: $lightgrey
         overflow-y: scroll
         width: 100vw
-            
+
+        // Flexbox container 
         .right-container
 
             .project
@@ -322,45 +325,17 @@ nav
                     order: 4
 
                 .image
-                    // width: 80%
                     max-height: 100%
                     max-width: 100%
                     object-fit: contain
-                    margin: auto
+                    margin: 0
 
                 p, h2
-                        margin-top: 0.1em
-                        margin-bottom: 0.1em
+                        margin-top: 0.2em
+                        margin-bottom: 0.2em
 
-
-//  Tablet display
-
-@media screen and (min-device-width: 768px) and (orientation: landscape)
-    header
-        .close-button
-            position: absolute
-            right: 2em
-
-    .flex-container
-            
-        .left-container
-            width: 40%
-            position: sticky
-            -webkit-position: sticky
-
-        main
-            width: 60%
-            height: 100%
-            
-            .right-container
-                .project
-                    width: 50%
-                    padding: 1em
-
-                
-
-
-
+// Media queries
+@import 'mediaqueries'
 
 
 
