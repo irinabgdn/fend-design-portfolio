@@ -159,6 +159,10 @@ nav .nav-inner .nav-row a.hover {
   padding: em;
 }
 
+.info-page .info-container .info-box {
+  width: 100%;
+}
+
 .info-page .info-container .info-box p {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
@@ -417,7 +421,23 @@ nav .nav-inner .nav-row a.hover {
   }
   .title-description {
     margin: 0.3em;
-    font-weight: normal;
+  }
+}
+
+@media only screen and (min-device-width: 601px) {
+  header .close-button {
+    top: 2.5vh;
+    width: 5vh;
+    height: 5vh;
+  }
+  nav .nav-inner {
+    margin-top: 10em;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (orientation: portait) {
+  .nav-inner {
+    margin-top: 15em;
   }
 }
 
@@ -426,26 +446,27 @@ nav .nav-inner .nav-row a.hover {
     position: absolute;
     right: 2em;
   }
-  .info-page {
-    overflow-y: scroll;
-  }
-  .info-page .about-container {
+  header .about-container {
     width: 40%;
   }
-  .info-page .about-container .large-text {
+  header .about-container .large-text {
     font-size: 120px;
   }
-  .info-page .about-container .row {
+  header .about-container .row {
     height: 0.6em;
   }
-  .info-page .contact-inner {
+  header .contact-inner {
     width: 40%;
   }
-  .info-page .contact-inner .large-text {
+  header .contact-inner .large-text {
     font-size: 120px;
   }
-  .info-page .contact-inner .row {
+  header .contact-inner .row {
     height: 0.6em;
+  }
+  .info-page .info-container {
+    width: 40%;
+    margin-top: 5em;
   }
   .flex-container .left-container {
     width: 40%;

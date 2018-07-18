@@ -1,4 +1,3 @@
-
 //  Define color variables
 
 $green: #49A370
@@ -11,14 +10,12 @@ $lightgrey: #fafafa
 $pale: #e0e0e8
 
 //  Define font variables
-
 $font1: Quicksand, sans-serif
 $size1: calc(1.4em + 0.5vw)
 $size2: calc(0.8em + 0.5vw)
 $size3: calc(0.7em + 0.5vw)
 
-// Mixin
-
+// Mixins
 @mixin btn 
     text-decoration: none
     font-weight: bold
@@ -49,11 +46,9 @@ h2
 p
     font-size: $size3
     text-align: left
-
  
 
 //  Flexbox
-
 .flex-container,
 .left-container,
 .right-container,
@@ -63,7 +58,6 @@ p
 
 
 //  Header and navigation
-
 header
     height: 10vh
     width: 100vw
@@ -93,8 +87,7 @@ header
             width: 80%
             height: 6%
             left: 10%
-            top: 47%
-        
+            top: 47%   
         
         &:after 
             content: ""
@@ -105,8 +98,7 @@ header
             height: 80%
             left: 47%
             top: 10%
-        
-        
+                
         &.open 
             background-color: $blue
             &:after 
@@ -115,7 +107,9 @@ header
             &:before
                 background-color: $red
             transform: rotate(225deg)
-    
+
+
+// Navigation menu    
 nav
     visibility: hidden
     opacity: 0
@@ -151,6 +145,7 @@ nav
                 color: $grey
                 cursor: pointer
 
+
 // About page and Contact page styles
 .info-page
     visibility: hidden
@@ -168,7 +163,8 @@ nav
         padding: em
 
         .info-box
-                   
+            width: 100%
+
             p
                 margin-top: 0.3em
                 margin-bottom: 0.3em
@@ -206,6 +202,7 @@ nav
         visibility: visible
         opacity: 1
         height: 90vh
+
 
 // Main flexbox 
 .flex-container
@@ -334,8 +331,9 @@ nav
                         margin-top: 0.2em
                         margin-bottom: 0.2em
 
+
 // Media queries
-@import 'mediaqueries'
+@import '_mediaqueries'
 
 
 
