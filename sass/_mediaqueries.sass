@@ -59,9 +59,21 @@
             margin-top: 10em    
 
 // Tablet portait
-@media screen and (min-device-width: 768px) and (orientation: portait)
+@media screen and (min-device-width: 768px) and (orientation: portrait)
     .nav-inner
         margin-top: 15em
+    
+    $size1: calc(1.4em + 1vw)
+    $size2: calc(0.8em + 1vw)
+    $size3: calc(0.7em + 1vw)
+
+    h1 
+        font-size: $size1
+    h2
+        font-size: $size2
+    
+    p
+        font-size: $size3
      
 
 // Tablet landscape
@@ -104,16 +116,36 @@
             height: 100%
             
             .right-container
+                width: 90%
+                margin
                 .project
                     width: 50%
                     padding: 1em
 
 
-// // Tablet portrait
-// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+// Desktop and laptop    
+@media only screen  and (min-device-width: 1224px)
+    $size1: calc(1.4em + 0.3vw)
+    $size2: calc(0.6em + 0.5vw)
+    $size3: calc(0.3em + 0.7vw)
 
+    h1 
+        font-size: $size1
+    h2,
+    .title-description
+        font-size: $size2
+    
+    p
+        font-size: $size3
+    
+    .info-page
+        .large-text
+            font-size: 80px
 
-
-
-// // Desktop and laptop    
-// @media only screen  and (min-device-width: 1224px)
+    nav 
+        .nav-inner
+            margin-top: 4em
+    
+    header
+        .close-button
+            right: 2em

@@ -250,7 +250,6 @@ nav .nav-inner .nav-row a.hover {
 
 .flex-container .left-container .left-inner .intro .intro-inner .title-description {
   width: 100%;
-  font-size: calc(0.8em + 0.5vw);
   font-weight: bold;
   text-align: justify;
   line-height: 1.2;
@@ -317,11 +316,13 @@ nav .nav-inner .nav-row a.hover {
   width: 100vw;
 }
 
+.flex-container main .right-container {
+  width: 80%;
+  margin: auto;
+}
+
 .flex-container main .right-container .project {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  padding-bottom: 5vw;
-  padding-top: 5vw;
+  padding-bottom: 3vh;
   width: 100%;
   display: block;
 }
@@ -407,7 +408,22 @@ nav .nav-inner .nav-row a.hover {
     height: 5vh;
   }
   nav .nav-inner {
-    margin-top: 8em;
+    margin-top: 10em;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (orientation: portrait) {
+  .nav-inner {
+    margin-top: 15em;
+  }
+  h1 {
+    font-size: calc(1.4em + 1vw);
+  }
+  h2 {
+    font-size: calc(0.8em + 1vw);
+  }
+  p {
+    font-size: calc(0.7em + 1vw);
   }
 }
 
@@ -447,8 +463,33 @@ nav .nav-inner .nav-row a.hover {
     width: 60%;
     height: 100%;
   }
+  .flex-container main .right-container {
+    width: 90%;
+  }
   .flex-container main .right-container .project {
     width: 50%;
     padding: 1em;
+  }
+}
+
+@media only screen and (min-device-width: 1224px) {
+  h1 {
+    font-size: calc(1.4em + 0.3vw);
+  }
+  h2,
+  .title-description {
+    font-size: calc(0.6em + 0.5vw);
+  }
+  p {
+    font-size: calc(0.3em + 0.7vw);
+  }
+  .info-page .large-text {
+    font-size: 80px;
+  }
+  nav .nav-inner {
+    margin-top: 4em;
+  }
+  .close-button {
+    right: 2em;
   }
 }
