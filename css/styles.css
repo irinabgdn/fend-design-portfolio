@@ -413,7 +413,7 @@ nav .nav-inner .nav-row a.hover {
   .info-page .info-container .info-box .large-text {
     width: 100%;
     display: block;
-    max-height: 100px;
+    max-height: 120px;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
   }
@@ -456,27 +456,9 @@ nav .nav-inner .nav-row a.hover {
     position: absolute;
     right: 2em;
   }
-  header .about-container {
-    width: 40%;
-  }
-  header .about-container .large-text {
-    font-size: 120px;
-  }
-  header .about-container .row {
-    height: 0.6em;
-  }
-  header .contact-inner {
-    width: 40%;
-  }
-  header .contact-inner .large-text {
-    font-size: 120px;
-  }
-  header .contact-inner .row {
-    height: 0.6em;
-  }
   .info-page .info-container {
     width: 40%;
-    margin-top: 5em;
+    margin-top: 3em;
   }
   .flex-container .left-container {
     width: 40%;
@@ -506,14 +488,17 @@ nav .nav-inner .nav-row a.hover {
   p {
     font-size: calc(0.3em + 0.7vw);
   }
-  .info-page .large-text {
-    font-size: 80px;
+  .info-page .info-container {
+    margin-top: 0;
   }
-  .info-page p {
+  .info-page .info-container .large-text {
+    font-size: 110px;
+  }
+  .info-page .info-container p {
     line-height: 1.3;
   }
   nav .nav-inner {
-    margin-top: 4em;
+    margin: 4em;
   }
   header .close-button {
     right: 2em;

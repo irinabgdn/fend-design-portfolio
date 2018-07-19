@@ -1,0 +1,125 @@
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  header {
+    height: 14vh;
+  }
+  nav {
+    top: 14vh;
+  }
+  nav.open {
+    height: 86vh;
+  }
+  nav .nav-inner .nav-row .btn {
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+  }
+  .info-page {
+    top: 14vh;
+  }
+  .info-page.open {
+    height: 86vh;
+  }
+  .info-page .info-container {
+    width: 80%;
+  }
+  .info-page .info-container .info-box {
+    width: 50%;
+    padding: 1em;
+    margin: auto;
+  }
+  .info-page .info-container .info-box .msg2 {
+    margin-top: 3.2em;
+  }
+  .info-page .info-container .info-box .large-text {
+    width: 100%;
+    display: block;
+    max-height: 120px;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+  .info-page .info-container .info-box .row {
+    display: none;
+  }
+  .title-description {
+    margin: 0.3em;
+  }
+}
+
+@media only screen and (min-device-width: 601px) {
+  header .close-button {
+    top: 2.5vh;
+    width: 5vh;
+    height: 5vh;
+  }
+  nav .nav-inner {
+    margin-top: 10em;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (orientation: portrait) {
+  .nav-inner {
+    margin-top: 15em;
+  }
+  h1 {
+    font-size: calc(1.4em + 1vw);
+  }
+  h2 {
+    font-size: calc(0.8em + 1vw);
+  }
+  p {
+    font-size: calc(0.7em + 1vw);
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  header .close-button {
+    position: absolute;
+    right: 2em;
+  }
+  .info-page .info-container {
+    width: 40%;
+    margin-top: 3em;
+  }
+  .flex-container .left-container {
+    width: 40%;
+    position: sticky;
+    -webkit-position: sticky;
+  }
+  .flex-container main {
+    width: 60%;
+    height: 100%;
+  }
+  .flex-container main .right-container {
+    width: 90%;
+  }
+  .flex-container main .right-container .project {
+    width: 50%;
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-device-width: 1224px) {
+  h1 {
+    font-size: calc(1.4em + 0.3vw);
+  }
+  h2 .title-description .link {
+    font-size: calc(0.6em + 0.5vw);
+  }
+  p {
+    font-size: calc(0.3em + 0.7vw);
+  }
+  .info-page .info-container {
+    margin-top: 0;
+  }
+  .info-page .info-container .large-text {
+    font-size: 110px;
+  }
+  .info-page .info-container p {
+    line-height: 1.3;
+  }
+  nav .nav-inner {
+    margin: 4em;
+  }
+  header .close-button {
+    right: 2em;
+  }
+}
