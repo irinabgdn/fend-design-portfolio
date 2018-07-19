@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -30,11 +29,8 @@ p {
 .left-container,
 .right-container,
 .info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 header {
@@ -58,8 +54,7 @@ header .close-button {
   position: absolute;
   top: 2vh;
   right: 10vw;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 header .close-button:before {
@@ -86,8 +81,7 @@ header .close-button:after {
 
 header .close-button.open {
   background-color: #02b3e4;
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 header .close-button.open:after {
@@ -107,7 +101,6 @@ nav {
   width: 100vw;
   position: fixed;
   top: 10vh;
-  -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
 }
 
@@ -239,13 +232,8 @@ nav .nav-inner .nav-row a.hover {
 }
 
 .flex-container .left-container .left-inner .intro .intro-inner .title-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
 }
 
@@ -271,11 +259,8 @@ nav .nav-inner .nav-row a.hover {
   width: 80%;
   position: absolute;
   bottom: 3vh;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .flex-container .left-container .left-inner footer .drawer {
@@ -343,34 +328,25 @@ nav .nav-inner .nav-row a.hover {
 }
 
 .flex-container main .right-container .project #first-project {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 
 .flex-container main .right-container .project #second-project {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 
 .flex-container main .right-container .project #third-project {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
 }
 
 .flex-container main .right-container .project #fourth-project {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
 }
 
 .flex-container main .right-container .project .image {
   max-height: 100%;
   max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin: 0;
 }
 
@@ -386,10 +362,10 @@ nav .nav-inner .nav-row a.hover {
   h2,
   .title-description,
   .link {
-    font-size: calc(0.5em + 0.7vw);
+    font-size: calc(0.3em + 0.5vw);
   }
   p {
-    font-size: calc(0.5em + 0.6vw);
+    font-size: calc(0.3em + 0.5vw);
   }
   header {
     height: 3em;
@@ -481,7 +457,7 @@ nav .nav-inner .nav-row a.hover {
   .flex-container .left-container {
     width: 40%;
     position: sticky;
-    -webkit-position: -webkit-sticky;
+    -webkit-position: sticky;
   }
   .flex-container main {
     width: 60%;
@@ -522,4 +498,3 @@ nav .nav-inner .nav-row a.hover {
     right: 2em;
   }
 }
-/*# sourceMappingURL=styles.css.map */

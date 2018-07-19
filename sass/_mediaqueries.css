@@ -1,6 +1,20 @@
 @media only screen and (max-device-width: 767px) and (orientation: landscape) {
+  h1 {
+    font-size: calc(0.9em + 0.7vw);
+  }
+  h2,
+  .title-description,
+  .link {
+    font-size: calc(0.5em + 0.7vw);
+  }
+  p {
+    font-size: calc(0.5em + 0.6vw);
+  }
   header {
-    height: 14vh;
+    height: 3em;
+  }
+  header .close-button {
+    top: 0.5em;
   }
   nav {
     top: 14vh;
@@ -35,12 +49,16 @@
     max-height: 120px;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
+    font-size: 80px;
   }
   .info-page .info-container .info-box .row {
     display: none;
   }
   .title-description {
     margin: 0.3em;
+  }
+  .secont-text {
+    display: none;
   }
 }
 

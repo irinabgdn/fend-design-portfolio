@@ -1,9 +1,25 @@
 // Mobile landscape
 
 @media only screen and (max-device-width: 767px) and (orientation: landscape)
-    header
-        height: 14vh
+    $size1: calc(0.9em + 0.7vw)
+    $size2: calc(0.5em + 0.7vw)
+    $size3: calc(0.5em + 0.6vw)
+
+    h1 
+        font-size: $size1
+    h2,
+    .title-description,
+    .link
+        font-size: $size2
     
+    p
+        font-size: $size3
+        
+    header
+        height: 3em
+        .close-button
+           top: 0.5em
+           
     nav 
         top: 14vh
 
@@ -39,12 +55,17 @@
                     max-height: 120px
                     margin-top: 0.3em
                     margin-bottom: 0.3em
+                    font-size: 80px
 
                 .row
                     display: none
 
     .title-description
-            margin: 0.3em
+        margin: 0.3em
+    
+    .secont-text
+        display: none
+        
 
 // Tablet display
 @media only screen and (min-device-width: 601px)
