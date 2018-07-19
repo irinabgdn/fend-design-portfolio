@@ -149,11 +149,12 @@ nav .nav-inner .nav-row a.hover {
 .info-page .info-container {
   width: 60%;
   margin: auto;
-  padding: em;
+  margin-top: 0.3em;
 }
 
 .info-page .info-container .info-box {
   width: 100%;
+  margin-top: 0;
 }
 
 .info-page .info-container .info-box p {
@@ -162,7 +163,6 @@ nav .nav-inner .nav-row a.hover {
 }
 
 .info-page .info-container .info-box .large-text {
-  margin-top: 1em;
   margin-bottom: 0.3em;
   font-size: 80px;
   color: #F4785A;
@@ -362,10 +362,10 @@ nav .nav-inner .nav-row a.hover {
   h2,
   .title-description,
   .link {
-    font-size: calc(0.3em + 0.5vw);
+    font-size: calc(0.5em + 0.7vw);
   }
   p {
-    font-size: calc(0.3em + 0.5vw);
+    font-size: calc(0.5em + 0.6vw);
   }
   header {
     height: 3em;
@@ -379,9 +379,12 @@ nav .nav-inner .nav-row a.hover {
   nav.open {
     height: 86vh;
   }
+  nav .nav-inner {
+    margin-top: 0.5em;
+  }
   nav .nav-inner .nav-row .btn {
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
   }
   .info-page {
     top: 14vh;
@@ -398,15 +401,18 @@ nav .nav-inner .nav-row a.hover {
     margin: auto;
   }
   .info-page .info-container .info-box .msg2 {
-    margin-top: 3.2em;
+    margin-top: 1em;
   }
   .info-page .info-container .info-box .large-text {
     width: 100%;
     display: block;
     max-height: 120px;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 80px;
+  }
+  .info-page .info-container .info-box p {
+    margin-top: 0;
   }
   .info-page .info-container .info-box .row {
     display: none;
@@ -427,6 +433,9 @@ nav .nav-inner .nav-row a.hover {
   }
   nav .nav-inner {
     margin-top: 10em;
+  }
+  .info-container {
+    margin-top: 4em;
   }
 }
 
